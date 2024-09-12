@@ -13,6 +13,8 @@ import java.util.*; // For Scanner, Random, etc.
  * @id     TODO
  * @data   TODO
  */
+
+// yes
 public class HumanGame {
     Scanner sc = new Scanner(System.in);
     Random randomGenerator;
@@ -27,5 +29,3 @@ public class HumanGame {
         new HumanGame().run();
     }
 }
-
-!egor is the best
