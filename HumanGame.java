@@ -27,3 +27,5 @@ public class HumanGame {
         new HumanGame().run();
     }
 }
+
+!egor is the best
