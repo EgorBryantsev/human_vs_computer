@@ -18,10 +18,11 @@ public class HumanGame {
     Scanner sc = new Scanner(System.in);
     Random randomGenerator;
 
-    int a = 1;
-    int am = 7; //sc.nextInt()
-    int x = randomGenerator();
-    int x = sc.nextInt();
+    int attempts = 1;
+    int attemptsMax = 7; //sc.nextInt()
+    int answer = randomGenerator();
+    //int guess = sc.nextInt();
+    int[] arrayGuess = new int[attemptsMax];
 
     void run() {
         // TODO: Implementation
@@ -29,22 +30,22 @@ public class HumanGame {
         // END TODO
     }
 
-    While(a>=am) {
+    While(attempts>=attemptsMax) {
         System.out.println("Guess a number");
-        int g = sc.nextInt();
-        if (g > x) {
+        int guess = sc.nextInt();
+        if (guess > answer) {
             System.out.println("Lower");
             //Array.. ar[a] = guess;
-            a ++;
-        } else if (g < x) {
+            attempts ++;
+        } else if (guess < answer) {
             System.out.println("Higher");
             //Array.. ar[a] = guess;
-            a ++;
-        } else if (g == x) {
+            attempts ++;
+        } else if (guess == answer) {
             System.out.println("Well done");
             System.out.println("You'll see the result here:");
             //Array.. ar[a] = guess;
-            a = am;
+            attempts = attemptsMax;
         } else {
             System.out.println("Error");
         }
