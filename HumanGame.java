@@ -18,10 +18,36 @@ public class HumanGame {
     Scanner sc = new Scanner(System.in);
     Random randomGenerator;
 
+    int a = 1;
+    int am = 7; //sc.nextInt()
+    int x = randomGenerator();
+    int x = sc.nextInt();
+
     void run() {
         // TODO: Implementation
       
         // END TODO
+    }
+
+    While(a>=am) {
+        System.out.println("Guess a number");
+        int g = sc.nextInt();
+        if (g > x) {
+            System.out.println("Lower");
+            //Array.. ar[a] = guess;
+            a ++;
+        } else if (g < x) {
+            System.out.println("Higher");
+            //Array.. ar[a] = guess;
+            a ++;
+        } else if (g == x) {
+            System.out.println("Well done");
+            System.out.println("You'll see the result here:");
+            //Array.. ar[a] = guess;
+            a = am;
+        } else {
+            System.out.println("Error");
+        }
     }
 
     public static void main(String[] args) {
