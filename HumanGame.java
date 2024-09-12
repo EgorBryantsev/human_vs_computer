@@ -53,4 +53,8 @@ public class HumanGame {
     public static void main(String[] args) {
         new HumanGame().run();
     }
-}
+    public String outputLines(int guess, int answer) {
+        String output = guess
+        return output;
+    }
+
