@@ -14,7 +14,6 @@ import java.util.*; // For Scanner, Random, etc.
  * @data   TODO
  */
 
-// yes
 public class HumanGame {
     Scanner sc = new Scanner(System.in);
     Random randomGenerator;
@@ -29,4 +28,3 @@ public class HumanGame {
         new HumanGame().run();
     }
 }
-// no
