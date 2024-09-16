@@ -1,4 +1,3 @@
-import java.io.Console;
 import java.util.*; // For Scanner, Random, etc.
 
 /** 
@@ -21,7 +20,7 @@ public class HumanGame {
     int attempts = 1;
     int attemptsMax = 7; //sc.nextInt()
     //int guess = sc.nextInt();
-    ArrayList<Integer> arrayGuess = new ArrayList<Integer>();
+    ArrayList<Integer> arrayGuess = new ArrayList<>();
 
     void run() {
         System.out.println("Type an arbitrary number");
@@ -30,21 +29,21 @@ public class HumanGame {
         int code = randomGenerator.nextInt(100);
         System.out.println("Start guessing!");
 
-        while(attempts<=attemptsMax) {
+        while (attempts <= attemptsMax) {
             int guess = sc.nextInt();
             arrayGuess.add(guess);
             if (guess > code) {
                 System.out.println("lower");
-                if(attempts == attemptsMax) {
+                if (attempts == attemptsMax) {
                     System.out.println("No more guesses, you lost");
                 }
-                attempts ++;
+                attempts++;
             } else if (guess < code) {
                 System.out.println("higher");
-                if(attempts == attemptsMax) {
+                if (attempts == attemptsMax) {
                     System.out.println("No more guesses, you lost");
                 }
-                attempts ++;
+                attempts++;
             } else if (guess == code) {
                 System.out.println("Good guess! You won.");
                 attempts = attemptsMax + 1;
@@ -58,61 +57,59 @@ public class HumanGame {
 
         int counter = 0;
         
-        while(counter < arrayGuess.size()) {
+        while (counter < arrayGuess.size()) {
             int counter2 = 0;
-            if(arrayGuess.get(counter) < code) {
-                while(counter2 < arrayGuess.get(counter)){
+            if (arrayGuess.get(counter) < code) {
+                while (counter2 < arrayGuess.get(counter)) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
                 System.out.print("x");
                 counter2++;
-                while(counter2 < code){
+                while (counter2 < code) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
                 System.out.print("|");
                 counter2++;
-                while(counter2 < 100){
+                while (counter2 < 100) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
             }
-            if(arrayGuess.get(counter) > code) {
-                while(counter2 < code){
+            if (arrayGuess.get(counter) > code) {
+                while (counter2 < code) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
                 System.out.print("|");
                 counter2++;
-                while(counter2 < arrayGuess.get(counter)){
+                while (counter2 < arrayGuess.get(counter)) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
                 System.out.print("x");
                 counter2++;
-                while(counter2 < 100){
+                while (counter2 < 100) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
             }
-            if(arrayGuess.get(counter) == code) {
-                while(counter2 < arrayGuess.get(counter)){
+            if (arrayGuess.get(counter) == code) {
+                while (counter2 < arrayGuess.get(counter)) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
                 System.out.print("x");
                 counter2++;
-                while(counter2 < 100){
+                while (counter2 < 100) {
                     System.out.print(".");
-                    counter2 ++;
+                    counter2++;
                 }
             }
             counter++;
             System.out.println("");
         }
-              
-        // END TODO
     }
 
     public static void main(String[] args) {
