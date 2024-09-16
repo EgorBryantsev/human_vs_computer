@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.*; // For Scanner, Random, etc.
 
 /** 
@@ -31,23 +32,21 @@ public class HumanGame {
 
         while(attempts<=attemptsMax) {
             int guess = sc.nextInt();
+            arrayGuess.add(guess);
             if (guess > code) {
                 System.out.println("lower");
-                arrayGuess.add(guess);
                 if(attempts == attemptsMax) {
                     System.out.println("No more guesses, you lost");
                 }
                 attempts ++;
             } else if (guess < code) {
                 System.out.println("higher");
-                arrayGuess.add(guess);
                 if(attempts == attemptsMax) {
                     System.out.println("No more guesses, you lost");
                 }
                 attempts ++;
             } else if (guess == code) {
                 System.out.println("Good guess! You won.");
-                arrayGuess.add(guess);
                 attempts = attemptsMax + 1;
             } else {
                 System.out.println("Error");
@@ -58,13 +57,9 @@ public class HumanGame {
         System.out.println("Guesses:");
 
         int counter = 0;
-        int counter2 = 0;
-
-        System.out.println(arrayGuess.size());
-        System.out.println(arrayGuess.get(counter2));
-
         
         while(counter < arrayGuess.size()) {
+            int counter2 = 0;
             if(arrayGuess.get(counter) < code) {
                 while(counter2 < arrayGuess.get(counter)){
                     System.out.print(".");
@@ -114,12 +109,9 @@ public class HumanGame {
                 }
             }
             counter++;
+            System.out.println("");
         }
-        
-        for(int i : arrayGuess){
-            System.out.println(i);
-        }
-      
+              
         // END TODO
     }
 
