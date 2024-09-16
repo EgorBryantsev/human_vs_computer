@@ -73,7 +73,7 @@ public class HumanGame {
                 }
                 System.out.print("|");
                 counter2++;
-                while(counter2 < 99){
+                while(counter2 < 100){
                     System.out.print(".");
                     counter2 ++;
                 }
@@ -91,7 +91,7 @@ public class HumanGame {
                 }
                 System.out.print("x");
                 counter2++;
-                while(counter2 < 99){
+                while(counter2 < 100){
                     System.out.print(".");
                     counter2 ++;
                 }
@@ -103,7 +103,7 @@ public class HumanGame {
                 }
                 System.out.print("x");
                 counter2++;
-                while(counter2 < 99){
+                while(counter2 < 100){
                     System.out.print(".");
                     counter2 ++;
                 }
@@ -118,9 +118,5 @@ public class HumanGame {
     public static void main(String[] args) {
         new HumanGame().run();
     }
-//     public String outputLines(int guess, int code) {
-//         String output = guess
-//         return output;
-//     }
 }
 
