@@ -51,7 +51,7 @@ public class EgorGame {
             System.out.println("No more guesses, you lost.");
         }
         
-        // guessing dots
+        // guessing history dots
         System.out.println(numberOfGuesses + " guesses:");
         for (int guess : guesses) {
             StringBuilder line = new StringBuilder();
@@ -77,6 +77,11 @@ public class EgorGame {
             System.out.println(line.toString());
         }
     }
+
+    /**.
+    *   Can also do the above by doing:
+    *   if guess > code, println [code-1]dots , | , [guess-code] dots , X , [99-guess] dots
+    */
 
     public static void main(String[] args) {
         new EgorGame().run();
