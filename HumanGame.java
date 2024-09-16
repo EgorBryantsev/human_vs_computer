@@ -16,46 +16,119 @@ import java.util.*; // For Scanner, Random, etc.
 
 public class HumanGame {
     Scanner sc = new Scanner(System.in);
-    Random randomGenerator;
-
+    
     int attempts = 1;
     int attemptsMax = 7; //sc.nextInt()
-    int answer = randomGenerator();
     //int guess = sc.nextInt();
-    int[] arrayGuess = new int[attemptsMax];
+    ArrayList<Integer> arrayGuess = new ArrayList<Integer>();
 
     void run() {
-        // TODO: Implementation
+        System.out.println("Type an arbitrary number");
+        long seed = sc.nextLong();
+        Random randomGenerator = new Random(seed);
+        int code = randomGenerator.nextInt(100);
+        System.out.println("Start guessing!");
+
+        while(attempts<=attemptsMax) {
+            int guess = sc.nextInt();
+            if (guess > code) {
+                System.out.println("lower");
+                arrayGuess.add(guess);
+                if(attempts == attemptsMax) {
+                    System.out.println("No more guesses, you lost");
+                }
+                attempts ++;
+            } else if (guess < code) {
+                System.out.println("higher");
+                arrayGuess.add(guess);
+                if(attempts == attemptsMax) {
+                    System.out.println("No more guesses, you lost");
+                }
+                attempts ++;
+            } else if (guess == code) {
+                System.out.println("Good guess! You won.");
+                arrayGuess.add(guess);
+                attempts = attemptsMax + 1;
+            } else {
+                System.out.println("Error");
+            }
+            
+        }
+
+        System.out.println("Guesses:");
+
+        int counter = 0;
+        int counter2 = 0;
+
+        System.out.println(arrayGuess.size());
+        System.out.println(arrayGuess.get(counter2));
+
+        
+        while(counter < arrayGuess.size()) {
+            if(arrayGuess.get(counter) < code) {
+                while(counter2 < arrayGuess.get(counter)){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+                System.out.print("x");
+                counter2++;
+                while(counter2 < code){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+                System.out.print("|");
+                counter2++;
+                while(counter2 < 99){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+            }
+            if(arrayGuess.get(counter) > code) {
+                while(counter2 < code){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+                System.out.print("|");
+                counter2++;
+                while(counter2 < arrayGuess.get(counter)){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+                System.out.print("x");
+                counter2++;
+                while(counter2 < 99){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+            }
+            if(arrayGuess.get(counter) == code) {
+                while(counter2 < arrayGuess.get(counter)){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+                System.out.print("x");
+                counter2++;
+                while(counter2 < 99){
+                    System.out.print(".");
+                    counter2 ++;
+                }
+            }
+            counter++;
+        }
+        
+        for(int i : arrayGuess){
+            System.out.println(i);
+        }
       
         // END TODO
-    }
-
-    While(attempts>=attemptsMax) {
-        System.out.println("Guess a number");
-        int guess = sc.nextInt();
-        if (guess > answer) {
-            System.out.println("Lower");
-            //Array.. ar[a] = guess;
-            attempts ++;
-        } else if (guess < answer) {
-            System.out.println("Higher");
-            //Array.. ar[a] = guess;
-            attempts ++;
-        } else if (guess == answer) {
-            System.out.println("Well done");
-            System.out.println("You'll see the result here:");
-            //Array.. ar[a] = guess;
-            attempts = attemptsMax;
-        } else {
-            System.out.println("Error");
-        }
     }
 
     public static void main(String[] args) {
         new HumanGame().run();
     }
-    public String outputLines(int guess, int answer) {
-        String output = guess
-        return output;
-    }
+//     public String outputLines(int guess, int code) {
+//         String output = guess
+//         return output;
+//     }
+}
 
