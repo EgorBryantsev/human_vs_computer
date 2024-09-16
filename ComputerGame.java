@@ -38,7 +38,7 @@ public class ComputerGame {
         
         // computer guess loop
         while (numberOfGuesses < 10 && !guessed) {
-            guess = lowerBound + (upperBound - lowerBound) / 2;
+            guess = lowerBound + (upperBound - lowerBound + 1) / 2;
             System.out.println(guess);
             numberOfGuesses++;
 
