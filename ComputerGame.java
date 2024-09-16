@@ -8,8 +8,8 @@ import java.util.Scanner;
  * when it is too low, and "guessed" when the computer guessed
  * your number correctly.
  * 
- * @author TODO
- * @id     TODO
+ * @author Egor Bryantsev
+ * @id     2087782
  * @author TODO
  * @id     TODO
  * @data   TODO

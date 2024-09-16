@@ -7,8 +7,8 @@ import java.util.*; // For Scanner, Random, etc.
  * 99 that you have to guess in at most seven tries. Afterwards, you see your
  * guessing history so you can learn to better play the game.
  * 
- * @author TODO
- * @id     TODO
+ * @author Egor Bryantsev
+ * @id     2087782
  * @author TODO
  * @id     TODO
  * @data   TODO
