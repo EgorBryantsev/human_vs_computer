@@ -78,10 +78,10 @@ public class EgorGame {
         }
     }
 
-/** 
- * Can also do the above by doing:
- * if guess > code, println 
- */
+    /**.
+    *   Can also do the above by doing:
+    *   if guess > code, println [code-1]dots , | , [guess-code] dots , X , [99-guess] dots
+    */
 
     public static void main(String[] args) {
         new EgorGame().run();
