@@ -41,22 +41,21 @@ public class ComputerGame {
             guess = lowerBound + (upperBound - lowerBound) / 2;
             System.out.println(guess);
             numberOfGuesses++;
-        }
 
-        // adjust guess based on user feedback
-        if (sc.hasNext()) {
-            String response = sc.next();
-            if (response.equalsIgnoreCase("lower")) {
-                upperBound = guess - 1;
-            } else if (response.equalsIgnoreCase("higher")) {
-                lowerBound = guess + 1;
-            } else if (response.equalsIgnoreCase("guessed")) {
-                guessed = true;
-            } else {
-                // invaid responses
-            }        
-        }
-
+            // adjust guess based on user feedback
+            if (sc.hasNext()) {
+                String response = sc.next();
+                if (response.equalsIgnoreCase("lower")) {
+                    upperBound = guess - 1;
+                } else if (response.equalsIgnoreCase("higher")) {
+                    lowerBound = guess + 1;
+                } else if (response.equalsIgnoreCase("guessed")) {
+                    guessed = true;
+                } else {
+                    // invaid responses
+                }        
+            }
+        }        
         // admit defeat
         if (!guessed) {
             System.out.println("I give up");
