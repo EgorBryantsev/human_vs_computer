@@ -24,7 +24,7 @@ public class EgorGame {
         // generate from seed
         int code = randomGenerator.nextInt(100);
         
-        // Start the guessing game
+        // guessing game
         System.out.println("Start guessing!");
         List<Integer> guesses = new ArrayList<>();
         boolean won = false;
@@ -51,7 +51,7 @@ public class EgorGame {
             System.out.println("No more guesses, you lost.");
         }
         
-        // Print Guessing History
+        // guessing dots
         System.out.println(numberOfGuesses + " guesses:");
         for (int guess : guesses) {
             StringBuilder line = new StringBuilder();
@@ -69,7 +69,7 @@ public class EgorGame {
                     line.append(" ");
                 }
             }
-            // If guess == code, remove the '|'
+            // If guess = code, remove the '|'
             if (guess == code) {
                 int pos = guess * 2; // Account for spaces
                 line.setCharAt(pos, 'X');
